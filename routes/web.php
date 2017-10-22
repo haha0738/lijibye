@@ -11,4 +11,7 @@
 |
 */
 
+Route::post('api/comment', 'CommentController@store');
+Route::get('api/comment/{to}', 'CommentController@show');
+
 Route::get('/{vue_capture?}', 'IndexController@index')->where('vue_capture', '[\/\w\.-]*');

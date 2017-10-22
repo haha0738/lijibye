@@ -6,10 +6,35 @@
  */
 
 import Vue from 'vue'
+import VeeValidate from 'vee-validate';
+import VueResource from 'vue-resource'
 import router from './router'
 import App from './components/App.vue'
 require('./bootstrap')
+require('./modal-video/jquery-modal-video')
+Vue.use(VeeValidate);
+Vue.use(VueResource);
+Vue.http.headers.common['X-CSRF-TOKEN'] = document.head.querySelector('meta[name="csrf-token"]').content;
+
+Vue.prototype.$users = [
+    {
+        id: 'liz',
+        name: '栗子',
+        fbId: '100006626567064',
+        youtubeId: 'lToWBPlk3sk',
+    },
+    {
+        id: 'jiji',
+        name: '雞雞',
+        fbId: '100002465127567',
+        youtubeId: 'npGZnIyL3us',
+    }
+];
+
 window.Vue = Vue;
+
+
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

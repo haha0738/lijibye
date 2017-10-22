@@ -1,33 +1,10 @@
 <template>
     <div id="index">
-        <audio autoplay>
-            <source src="bg.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-
-
+        <router-view></router-view>
         <h1>栗雞掰</h1>
         <div class="row">
-            <div class="col-md-3 col-md-offset-3">
-                <div class="thumbnail">
-                    <img src="https://graph.facebook.com/100006626567064/picture?type=square&width=500&height=500" class="img-circle" width="200" height="200">
-                    <div class="caption">
-                        <h3>栗子</h3>
-                        <p>2016 - 2017</p>
-                        <button v-on:click="saySomething" class="btn btn-primary btn-lg">說句話</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="thumbnail">
-                    <img src="https://graph.facebook.com/100002465127567/picture?type=square&width=500&height=500" class="img-circle" width="200" height="200">
-                    <div class="caption">
-                        <h3>雞雞</h3>
-                        <p>2016 - 2017</p>
-                        <button v-on:click="saySomething" class="btn btn-primary btn-lg">說句話</button>
-                    </div>
-                </div>
-            </div>
+            <div class="col-md-3"></div>
+            <quit-profile v-for="user in users" :key="user.name" class="col-md-3 " :fb-id="user.fbId" :user-id="user.id" :user-name="user.name" :youtube-id="user.youtubeId"></quit-profile>
         </div>
     </div>
 </template>
@@ -37,25 +14,34 @@
         margin-top: 60px;
     }
 
-    img{
-        filter: grayscale(100%);
-    }
+
 </style>
 <script>
-
+    import QuitProfile from './QuitProfile'
     export default{
         data(){
             return{
-                msg:'hello vue'
+
             }
         },
         methods:{
             saySomething: function(event){
                 alert('懶得做，等我想到在做');
-            }
+            },
+            watch: function(event){
+
+            },
         },
         components:{
-
+            QuitProfile
+        },
+        mounted(){
+            //$(".js-modal-btn").modalVideo();
+        },
+        computed: {
+            users: function(){
+                return this.$users;
+            }
         }
     }
 </script>
