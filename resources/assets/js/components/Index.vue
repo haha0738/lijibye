@@ -8,6 +8,7 @@
                     <div class="caption">
                         <h3>栗子</h3>
                         <p>2016 - 2017</p>
+                        <button v-on:click="saySomething" class="btn btn-primary btn-lg">說句話</button>
                     </div>
                 </div>
             </div>
@@ -17,6 +18,7 @@
                     <div class="caption">
                         <h3>雞雞</h3>
                         <p>2016 - 2017</p>
+                        <button v-on:click="saySomething" class="btn btn-primary btn-lg">說句話</button>
                     </div>
                 </div>
             </div>
@@ -39,6 +41,11 @@
         data(){
             return{
                 msg:'hello vue'
+            }
+        },
+        methods:{
+            saySomething: function(event){
+                alert('懶得做，等我想到在做');
             }
         },
         components:{

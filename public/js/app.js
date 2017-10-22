@@ -45868,6 +45868,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -45877,6 +45879,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
 
+    methods: {
+        saySomething: function saySomething(event) {
+            alert('懶得做，等我想到在做');
+        }
+    },
     components: {}
 });
 
@@ -45930,60 +45937,71 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "index" } }, [
-      _c("h1", [_vm._v("栗雞掰")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-3 col-md-offset-3" }, [
-          _c("div", { staticClass: "thumbnail" }, [
-            _c("img", {
-              staticClass: "img-circle",
-              attrs: {
-                src:
-                  "https://graph.facebook.com/100006626567064/picture?type=square&width=500&height=500",
-                width: "200",
-                height: "200"
-              }
-            }),
+  return _c("div", { attrs: { id: "index" } }, [
+    _c("h1", [_vm._v("栗雞掰")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-3 col-md-offset-3" }, [
+        _c("div", { staticClass: "thumbnail" }, [
+          _c("img", {
+            staticClass: "img-circle",
+            attrs: {
+              src:
+                "https://graph.facebook.com/100006626567064/picture?type=square&width=500&height=500",
+              width: "200",
+              height: "200"
+            }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "caption" }, [
+            _c("h3", [_vm._v("栗子")]),
             _vm._v(" "),
-            _c("div", { staticClass: "caption" }, [
-              _c("h3", [_vm._v("栗子")]),
-              _vm._v(" "),
-              _c("p", [_vm._v("2016 - 2017")])
-            ])
+            _c("p", [_vm._v("2016 - 2017")]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary btn-lg",
+                on: { click: _vm.saySomething }
+              },
+              [_vm._v("說句話")]
+            )
           ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _c("div", { staticClass: "thumbnail" }, [
-            _c("img", {
-              staticClass: "img-circle",
-              attrs: {
-                src:
-                  "https://graph.facebook.com/100002465127567/picture?type=square&width=500&height=500",
-                width: "200",
-                height: "200"
-              }
-            }),
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-3" }, [
+        _c("div", { staticClass: "thumbnail" }, [
+          _c("img", {
+            staticClass: "img-circle",
+            attrs: {
+              src:
+                "https://graph.facebook.com/100002465127567/picture?type=square&width=500&height=500",
+              width: "200",
+              height: "200"
+            }
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "caption" }, [
+            _c("h3", [_vm._v("雞雞")]),
             _vm._v(" "),
-            _c("div", { staticClass: "caption" }, [
-              _c("h3", [_vm._v("雞雞")]),
-              _vm._v(" "),
-              _c("p", [_vm._v("2016 - 2017")])
-            ])
+            _c("p", [_vm._v("2016 - 2017")]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary btn-lg",
+                on: { click: _vm.saySomething }
+              },
+              [_vm._v("說句話")]
+            )
           ])
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
