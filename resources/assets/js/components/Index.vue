@@ -1,5 +1,11 @@
 <template>
     <div id="index">
+        <audio autoplay>
+            <source src="bg.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+
         <h1>栗雞掰</h1>
         <div class="row">
             <div class="col-md-3 col-md-offset-3">
